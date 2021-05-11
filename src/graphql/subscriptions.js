@@ -12,6 +12,36 @@ export const onCreateOrder = /* GraphQL */ `
           id
           orderID
           productID
+          order {
+            id
+            buyer_name
+            order_total_amount
+            products {
+              nextToken
+              startedAt
+            }
+            created_at
+            _version
+            _deleted
+            _lastChangedAt
+            createdAt
+            updatedAt
+          }
+          product {
+            id
+            product_name
+            product_price
+            created_at
+            orders {
+              nextToken
+              startedAt
+            }
+            _version
+            _deleted
+            _lastChangedAt
+            createdAt
+            updatedAt
+          }
           _version
           _deleted
           _lastChangedAt
@@ -41,6 +71,36 @@ export const onUpdateOrder = /* GraphQL */ `
           id
           orderID
           productID
+          order {
+            id
+            buyer_name
+            order_total_amount
+            products {
+              nextToken
+              startedAt
+            }
+            created_at
+            _version
+            _deleted
+            _lastChangedAt
+            createdAt
+            updatedAt
+          }
+          product {
+            id
+            product_name
+            product_price
+            created_at
+            orders {
+              nextToken
+              startedAt
+            }
+            _version
+            _deleted
+            _lastChangedAt
+            createdAt
+            updatedAt
+          }
           _version
           _deleted
           _lastChangedAt
@@ -70,6 +130,36 @@ export const onDeleteOrder = /* GraphQL */ `
           id
           orderID
           productID
+          order {
+            id
+            buyer_name
+            order_total_amount
+            products {
+              nextToken
+              startedAt
+            }
+            created_at
+            _version
+            _deleted
+            _lastChangedAt
+            createdAt
+            updatedAt
+          }
+          product {
+            id
+            product_name
+            product_price
+            created_at
+            orders {
+              nextToken
+              startedAt
+            }
+            _version
+            _deleted
+            _lastChangedAt
+            createdAt
+            updatedAt
+          }
           _version
           _deleted
           _lastChangedAt
@@ -99,6 +189,38 @@ export const onCreateOrderProducts = /* GraphQL */ `
         buyer_name
         order_total_amount
         products {
+          items {
+            id
+            orderID
+            productID
+            order {
+              id
+              buyer_name
+              order_total_amount
+              created_at
+              _version
+              _deleted
+              _lastChangedAt
+              createdAt
+              updatedAt
+            }
+            product {
+              id
+              product_name
+              product_price
+              created_at
+              _version
+              _deleted
+              _lastChangedAt
+              createdAt
+              updatedAt
+            }
+            _version
+            _deleted
+            _lastChangedAt
+            createdAt
+            updatedAt
+          }
           nextToken
           startedAt
         }
@@ -115,6 +237,38 @@ export const onCreateOrderProducts = /* GraphQL */ `
         product_price
         created_at
         orders {
+          items {
+            id
+            orderID
+            productID
+            order {
+              id
+              buyer_name
+              order_total_amount
+              created_at
+              _version
+              _deleted
+              _lastChangedAt
+              createdAt
+              updatedAt
+            }
+            product {
+              id
+              product_name
+              product_price
+              created_at
+              _version
+              _deleted
+              _lastChangedAt
+              createdAt
+              updatedAt
+            }
+            _version
+            _deleted
+            _lastChangedAt
+            createdAt
+            updatedAt
+          }
           nextToken
           startedAt
         }
@@ -143,6 +297,38 @@ export const onUpdateOrderProducts = /* GraphQL */ `
         buyer_name
         order_total_amount
         products {
+          items {
+            id
+            orderID
+            productID
+            order {
+              id
+              buyer_name
+              order_total_amount
+              created_at
+              _version
+              _deleted
+              _lastChangedAt
+              createdAt
+              updatedAt
+            }
+            product {
+              id
+              product_name
+              product_price
+              created_at
+              _version
+              _deleted
+              _lastChangedAt
+              createdAt
+              updatedAt
+            }
+            _version
+            _deleted
+            _lastChangedAt
+            createdAt
+            updatedAt
+          }
           nextToken
           startedAt
         }
@@ -159,6 +345,38 @@ export const onUpdateOrderProducts = /* GraphQL */ `
         product_price
         created_at
         orders {
+          items {
+            id
+            orderID
+            productID
+            order {
+              id
+              buyer_name
+              order_total_amount
+              created_at
+              _version
+              _deleted
+              _lastChangedAt
+              createdAt
+              updatedAt
+            }
+            product {
+              id
+              product_name
+              product_price
+              created_at
+              _version
+              _deleted
+              _lastChangedAt
+              createdAt
+              updatedAt
+            }
+            _version
+            _deleted
+            _lastChangedAt
+            createdAt
+            updatedAt
+          }
           nextToken
           startedAt
         }
@@ -187,6 +405,38 @@ export const onDeleteOrderProducts = /* GraphQL */ `
         buyer_name
         order_total_amount
         products {
+          items {
+            id
+            orderID
+            productID
+            order {
+              id
+              buyer_name
+              order_total_amount
+              created_at
+              _version
+              _deleted
+              _lastChangedAt
+              createdAt
+              updatedAt
+            }
+            product {
+              id
+              product_name
+              product_price
+              created_at
+              _version
+              _deleted
+              _lastChangedAt
+              createdAt
+              updatedAt
+            }
+            _version
+            _deleted
+            _lastChangedAt
+            createdAt
+            updatedAt
+          }
           nextToken
           startedAt
         }
@@ -203,6 +453,38 @@ export const onDeleteOrderProducts = /* GraphQL */ `
         product_price
         created_at
         orders {
+          items {
+            id
+            orderID
+            productID
+            order {
+              id
+              buyer_name
+              order_total_amount
+              created_at
+              _version
+              _deleted
+              _lastChangedAt
+              createdAt
+              updatedAt
+            }
+            product {
+              id
+              product_name
+              product_price
+              created_at
+              _version
+              _deleted
+              _lastChangedAt
+              createdAt
+              updatedAt
+            }
+            _version
+            _deleted
+            _lastChangedAt
+            createdAt
+            updatedAt
+          }
           nextToken
           startedAt
         }
@@ -232,6 +514,36 @@ export const onCreateProduct = /* GraphQL */ `
           id
           orderID
           productID
+          order {
+            id
+            buyer_name
+            order_total_amount
+            products {
+              nextToken
+              startedAt
+            }
+            created_at
+            _version
+            _deleted
+            _lastChangedAt
+            createdAt
+            updatedAt
+          }
+          product {
+            id
+            product_name
+            product_price
+            created_at
+            orders {
+              nextToken
+              startedAt
+            }
+            _version
+            _deleted
+            _lastChangedAt
+            createdAt
+            updatedAt
+          }
           _version
           _deleted
           _lastChangedAt
@@ -261,6 +573,36 @@ export const onUpdateProduct = /* GraphQL */ `
           id
           orderID
           productID
+          order {
+            id
+            buyer_name
+            order_total_amount
+            products {
+              nextToken
+              startedAt
+            }
+            created_at
+            _version
+            _deleted
+            _lastChangedAt
+            createdAt
+            updatedAt
+          }
+          product {
+            id
+            product_name
+            product_price
+            created_at
+            orders {
+              nextToken
+              startedAt
+            }
+            _version
+            _deleted
+            _lastChangedAt
+            createdAt
+            updatedAt
+          }
           _version
           _deleted
           _lastChangedAt
@@ -290,6 +632,36 @@ export const onDeleteProduct = /* GraphQL */ `
           id
           orderID
           productID
+          order {
+            id
+            buyer_name
+            order_total_amount
+            products {
+              nextToken
+              startedAt
+            }
+            created_at
+            _version
+            _deleted
+            _lastChangedAt
+            createdAt
+            updatedAt
+          }
+          product {
+            id
+            product_name
+            product_price
+            created_at
+            orders {
+              nextToken
+              startedAt
+            }
+            _version
+            _deleted
+            _lastChangedAt
+            createdAt
+            updatedAt
+          }
           _version
           _deleted
           _lastChangedAt

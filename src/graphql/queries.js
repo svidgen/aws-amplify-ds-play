@@ -19,6 +19,38 @@ export const syncOrders = /* GraphQL */ `
         buyer_name
         order_total_amount
         products {
+          items {
+            id
+            orderID
+            productID
+            order {
+              id
+              buyer_name
+              order_total_amount
+              created_at
+              _version
+              _deleted
+              _lastChangedAt
+              createdAt
+              updatedAt
+            }
+            product {
+              id
+              product_name
+              product_price
+              created_at
+              _version
+              _deleted
+              _lastChangedAt
+              createdAt
+              updatedAt
+            }
+            _version
+            _deleted
+            _lastChangedAt
+            createdAt
+            updatedAt
+          }
           nextToken
           startedAt
         }
@@ -45,6 +77,36 @@ export const getOrder = /* GraphQL */ `
           id
           orderID
           productID
+          order {
+            id
+            buyer_name
+            order_total_amount
+            products {
+              nextToken
+              startedAt
+            }
+            created_at
+            _version
+            _deleted
+            _lastChangedAt
+            createdAt
+            updatedAt
+          }
+          product {
+            id
+            product_name
+            product_price
+            created_at
+            orders {
+              nextToken
+              startedAt
+            }
+            _version
+            _deleted
+            _lastChangedAt
+            createdAt
+            updatedAt
+          }
           _version
           _deleted
           _lastChangedAt
@@ -75,6 +137,38 @@ export const listOrders = /* GraphQL */ `
         buyer_name
         order_total_amount
         products {
+          items {
+            id
+            orderID
+            productID
+            order {
+              id
+              buyer_name
+              order_total_amount
+              created_at
+              _version
+              _deleted
+              _lastChangedAt
+              createdAt
+              updatedAt
+            }
+            product {
+              id
+              product_name
+              product_price
+              created_at
+              _version
+              _deleted
+              _lastChangedAt
+              createdAt
+              updatedAt
+            }
+            _version
+            _deleted
+            _lastChangedAt
+            createdAt
+            updatedAt
+          }
           nextToken
           startedAt
         }
@@ -111,6 +205,20 @@ export const syncOrderProducts = /* GraphQL */ `
           id
           buyer_name
           order_total_amount
+          products {
+            items {
+              id
+              orderID
+              productID
+              _version
+              _deleted
+              _lastChangedAt
+              createdAt
+              updatedAt
+            }
+            nextToken
+            startedAt
+          }
           created_at
           _version
           _deleted
@@ -123,6 +231,20 @@ export const syncOrderProducts = /* GraphQL */ `
           product_name
           product_price
           created_at
+          orders {
+            items {
+              id
+              orderID
+              productID
+              _version
+              _deleted
+              _lastChangedAt
+              createdAt
+              updatedAt
+            }
+            nextToken
+            startedAt
+          }
           _version
           _deleted
           _lastChangedAt
@@ -151,6 +273,38 @@ export const getOrderProducts = /* GraphQL */ `
         buyer_name
         order_total_amount
         products {
+          items {
+            id
+            orderID
+            productID
+            order {
+              id
+              buyer_name
+              order_total_amount
+              created_at
+              _version
+              _deleted
+              _lastChangedAt
+              createdAt
+              updatedAt
+            }
+            product {
+              id
+              product_name
+              product_price
+              created_at
+              _version
+              _deleted
+              _lastChangedAt
+              createdAt
+              updatedAt
+            }
+            _version
+            _deleted
+            _lastChangedAt
+            createdAt
+            updatedAt
+          }
           nextToken
           startedAt
         }
@@ -167,6 +321,38 @@ export const getOrderProducts = /* GraphQL */ `
         product_price
         created_at
         orders {
+          items {
+            id
+            orderID
+            productID
+            order {
+              id
+              buyer_name
+              order_total_amount
+              created_at
+              _version
+              _deleted
+              _lastChangedAt
+              createdAt
+              updatedAt
+            }
+            product {
+              id
+              product_name
+              product_price
+              created_at
+              _version
+              _deleted
+              _lastChangedAt
+              createdAt
+              updatedAt
+            }
+            _version
+            _deleted
+            _lastChangedAt
+            createdAt
+            updatedAt
+          }
           nextToken
           startedAt
         }
@@ -199,6 +385,20 @@ export const listOrderProductss = /* GraphQL */ `
           id
           buyer_name
           order_total_amount
+          products {
+            items {
+              id
+              orderID
+              productID
+              _version
+              _deleted
+              _lastChangedAt
+              createdAt
+              updatedAt
+            }
+            nextToken
+            startedAt
+          }
           created_at
           _version
           _deleted
@@ -211,6 +411,20 @@ export const listOrderProductss = /* GraphQL */ `
           product_name
           product_price
           created_at
+          orders {
+            items {
+              id
+              orderID
+              productID
+              _version
+              _deleted
+              _lastChangedAt
+              createdAt
+              updatedAt
+            }
+            nextToken
+            startedAt
+          }
           _version
           _deleted
           _lastChangedAt
@@ -247,6 +461,38 @@ export const syncProducts = /* GraphQL */ `
         product_price
         created_at
         orders {
+          items {
+            id
+            orderID
+            productID
+            order {
+              id
+              buyer_name
+              order_total_amount
+              created_at
+              _version
+              _deleted
+              _lastChangedAt
+              createdAt
+              updatedAt
+            }
+            product {
+              id
+              product_name
+              product_price
+              created_at
+              _version
+              _deleted
+              _lastChangedAt
+              createdAt
+              updatedAt
+            }
+            _version
+            _deleted
+            _lastChangedAt
+            createdAt
+            updatedAt
+          }
           nextToken
           startedAt
         }
@@ -273,6 +519,36 @@ export const getProduct = /* GraphQL */ `
           id
           orderID
           productID
+          order {
+            id
+            buyer_name
+            order_total_amount
+            products {
+              nextToken
+              startedAt
+            }
+            created_at
+            _version
+            _deleted
+            _lastChangedAt
+            createdAt
+            updatedAt
+          }
+          product {
+            id
+            product_name
+            product_price
+            created_at
+            orders {
+              nextToken
+              startedAt
+            }
+            _version
+            _deleted
+            _lastChangedAt
+            createdAt
+            updatedAt
+          }
           _version
           _deleted
           _lastChangedAt
@@ -303,6 +579,38 @@ export const listProducts = /* GraphQL */ `
         product_price
         created_at
         orders {
+          items {
+            id
+            orderID
+            productID
+            order {
+              id
+              buyer_name
+              order_total_amount
+              created_at
+              _version
+              _deleted
+              _lastChangedAt
+              createdAt
+              updatedAt
+            }
+            product {
+              id
+              product_name
+              product_price
+              created_at
+              _version
+              _deleted
+              _lastChangedAt
+              createdAt
+              updatedAt
+            }
+            _version
+            _deleted
+            _lastChangedAt
+            createdAt
+            updatedAt
+          }
           nextToken
           startedAt
         }

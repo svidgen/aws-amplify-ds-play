@@ -1,8 +1,6 @@
-type Order
-  @model
+type Order @model {
   # @key(name: "byStore", fields: ["storeID"])
   # @auth(rules: [{allow: private, operations: [read, update, create, delete]}])
-{
   id: ID!
   buyer_name: String
   order_total_amount: String
@@ -12,10 +10,9 @@ type Order
 
 type OrderProducts
   @model
-  @key(name: "byOrder", fields:["orderID", "productID"])
-  @key(name: "byProduct", fields:["productID", "orderID"])
+  @key(name: "byOrder", fields: ["orderID", "productID"])
+  @key(name: "byProduct", fields: ["productID", "orderID"]) {
   # @auth(rules: [{allow: private, operations: [read, update, create, delete]}])
-{
   id: ID!
   orderID: ID!
   productID: ID!
@@ -23,14 +20,12 @@ type OrderProducts
   product: Product! @connection(fields: ["productID"])
 }
 
-type Product
-  @model
+type Product @model {
   # @key(name: "byStore", fields: ["storeID"])
   # @auth(rules: [{allow: owner, operations: [create, update, delete]}, {allow: public, provider: iam, operations: [read]}])
-{
   id: ID!
   product_name: String!
   product_price: String!
   created_at: AWSTimestamp
-  orders: [OrderProducts] @connection(keyName: "byProduct", fields:["id"])
+  orders: [OrderProducts] @connection(keyName: "byProduct", fields: ["id"])
 }
